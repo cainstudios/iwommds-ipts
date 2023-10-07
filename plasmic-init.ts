@@ -1,5 +1,6 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import { mySection } from "./components/hello-world";
+import { Collapse } from "./components/collapse";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -30,5 +31,20 @@ PLASMIC.registerComponent(mySection, {
       type: 'slot',
     },
     hideHeading: { type: 'boolean' },
+  },
+});
+
+PLASMIC.registerComponent(Collapse, {
+  name: 'Collapse',
+  props: {
+    title: {
+      type: 'slot',
+      defaultValue: 'This is the title',
+    },
+    children: {
+      type: 'slot',
+      defaultValue: 'This is the body',
+    },
+    previewShown: 'boolean',
   },
 });
