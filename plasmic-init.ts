@@ -1,4 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import { mySection } from "./components/hello-world";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -22,4 +23,12 @@ export const PLASMIC = initPlasmicLoader({
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
-// PLASMIC.registerComponent(...);
+PLASMIC.registerComponent(mySection, {
+  name: "mySection",
+  props: {
+    children: {
+      type: 'slot',
+    },
+    hideHeading: { type: 'boolean' },
+  },
+});
