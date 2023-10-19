@@ -12,7 +12,7 @@
     "@plasmicapp/loader-nextjs": "^1.0.319",
     "@plasmicpkgs/antd": "^2.0.88",
     "antd": "^5.9.4",
-    "next": "13.5.4",
+    "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -21,7 +21,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4",
+    "eslint-config-next": "13.5.6",
     "typescript": "^5"
   }
 }
